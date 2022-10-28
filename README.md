@@ -35,3 +35,5 @@ As our lives are very busy these days, we often feel we need more than 24 hrs. a
 
  - The database will have all the details and the user can search the news by using a search bar.
  
+ 
+ 
