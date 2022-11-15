@@ -1,0 +1,19 @@
+CREATE TABLE USERS(
+name varchar(255),
+username varchar(255) not null primary key,
+password varchar(255),
+phno varchar(10),
+dob varchar(10),
+topics varchar(10000)
+);
+
+CREATE TABLE NEWS(
+user varchar(255),
+news_title varchar(255),
+news_article_link varchar(1024),
+news_image_link varchar(1024),
+news_date varchar(255),
+news_description varchar(255),
+news_type varchar(1) check (news_type in ('B','L')) ,
+foreign key(user) references USERS(username)
+);
