@@ -14,7 +14,7 @@ const Profile = () => {
   const [selectedVal, setSelectedVal] = useState([]);
   useEffect(() => {
     const fn = async () => {
-      const profileData = await axios.get("http://169.51.205.76:32522/profile?userName=" + sessionStorage.getItem('@user'));
+      const profileData = await axios.get("http://localhost:5000/profile?userName=" + sessionStorage.getItem('@user'));
       console.log('data', profileData.data.topics);
       setData(profileData.data);
       const selval = [];
@@ -166,7 +166,7 @@ const Profile = () => {
                           user: sessionStorage.getItem('@user'),
                           topics: topicSelected
                         }
-                        await axios.post("http://169.51.205.76:32522/update-profile",payload);
+                        await axios.post("http://localhost:5000/update-profile",payload);
                       }} className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
                         Update
                       </button>
@@ -180,7 +180,7 @@ const Profile = () => {
                 <div className="flex flex-wrap items-center md:justify-between justify-center">
                   <div className="w-full md:w-6/12 px-4 mx-auto text-center">
                     <div className="text-sm text-white font-semibold py-1">
-                      Made by Saitama Squad
+                      Made by SECE IT TEAM
                     </div>
                   </div>
                 </div>

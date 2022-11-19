@@ -20,8 +20,8 @@ const NewsFeed = () => {
   // }, [bookedArticles])
   useEffect(() => {
     const fn = () => {
-      axios.get("http://169.51.205.76:32522/get-top-headlines?userName=" + sessionStorage.getItem('@user')).then((data, error) => {
-        axios.get("http://169.51.205.76:32522/profile?userName=" + sessionStorage.getItem('@user')).then((profileData, err) => {
+      axios.get("http://localhost:5000/get-top-headlines?userName=" + sessionStorage.getItem('@user')).then((data, error) => {
+        axios.get("http://localhost:5000/profile?userName=" + sessionStorage.getItem('@user')).then((profileData, err) => {
           console.log(profileData);
           let likedList = [], bookedList = [];
           for(const article of profileData?.data.likes){
