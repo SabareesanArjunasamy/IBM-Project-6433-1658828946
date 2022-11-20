@@ -39,4 +39,6 @@ As our lives are very busy these days, we often feel we need more than 24 hrs. a
  
 ## DEMO :
 
+- Click to Play
+
 [![Watch the video](https://github.com/IBM-EPBL/IBM-Project-6433-1658828946/blob/main/Final%20Deliverables/sampleimage.JPG)](https://drive.google.com/file/d/1oMSyojAt3-CQfPVX902I3XAPs4sEqjz8/view?usp=share_link)
