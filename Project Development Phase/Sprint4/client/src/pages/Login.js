@@ -9,7 +9,7 @@ const Login = () => {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    fetch('http://169.51.205.76:32522/authenticate', {
+    fetch('http://localhost:5000/authenticate', {
       method: 'POST',
       mode: 'cors',
       redirect: 'manual',
@@ -89,13 +89,13 @@ const Login = () => {
           }}
         >
           <h1 className="text-4xl font-bold text-white tracking-wide">
-            Welcome to NewsHub
+            Welcome to NewsWorld
           </h1>
           <h1 className="text-5xl py-2 font-bold text-white tracking-wide">
 
           </h1>
           <p className="text-white py-2">
-            Provide you with the news you want. <br /> Save Time. Say yes to NewsHub.
+            Provide you with the news you want. <br /> Save Time. Say yes to NewsWorld.
           </p>
           <span className="text-white">
             Create New Account?

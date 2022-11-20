@@ -38,7 +38,7 @@ const News = (props) => {
             component="img"
             height="50"
             style={{ margin: "auto", height: "500px", width: "500px" }}
-            src="https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDLUgPm6eqlc3xZzykaaMRKvUUlMVaaiUlA&usqp=CAU"
             alt="Paella dish"
           />
         }
@@ -58,7 +58,7 @@ const News = (props) => {
                 type: 'R'
               }
               console.log(payload);
-              await axios.post('http://169.51.205.76:32522/action', payload);
+              await axios.post('http://localhost:5000/action', payload);
             }} aria-label="add to favorites">
               <FavoriteIcon />
             </IconButton>
@@ -69,15 +69,15 @@ const News = (props) => {
                 email: sessionStorage.getItem('@user'),
                 title: props.new.title ? props.new.title : "",
                 url: props.new.url ? props.new.url : "",
-                urlToImage: props.new.urlToImage ? props.new.urlToImage : "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg",
+                urlToImage: props.new.urlToImage ? props.new.urlToImage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDLUgPm6eqlc3xZzykaaMRKvUUlMVaaiUlA&usqp=CAU",
                 publishedAt: props.new.publishedAt ? props.new.publishedAt : "",
                 description: props.new.description ? props.new.description : "",
                 action: 'S',
                 type: 'A'
               }
               console.log(payload);
-              //169.51.205.76:32522
-              await axios.post('http://169.51.205.76:32522/action', payload);
+              //localhost:5000
+              await axios.post('http://localhost:5000/action', payload);
             }} aria-label="add to favorites">
               <FavoriteIcon />
             </IconButton>
@@ -91,22 +91,22 @@ const News = (props) => {
                 type: 'R'
               }
               console.log(payload);
-              await axios.post('http://169.51.205.76:32522/action', payload);
+              await axios.post('http://localhost:5000/action', payload);
               setBookMark(false)
             }} style={{ color: "green" }} /> : <BookmarkIcon onClick={async () => {
               const payload = {
                 email: sessionStorage.getItem('@user'),
                 title: props.new.title ? props.new.title : "",
                 url: props.new.url ? props.new.url : "",
-                urlToImage: props.new.urlToImage ? props.new.urlToImage : "https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg",
+                urlToImage: props.new.urlToImage ? props.new.urlToImage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDLUgPm6eqlc3xZzykaaMRKvUUlMVaaiUlA&usqp=CAU",
                 publishedAt: props.new.publishedAt ? props.new.publishedAt : "",
                 description: props.new.description ? props.new.description : "",
                 action: 'B',
                 type: 'A'
               }
               console.log(payload);
-              //169.51.205.76:32522
-              await axios.post('http://169.51.205.76:32522/action', payload);
+              //localhost:5000
+              await axios.post('http://localhost:5000/action', payload);
               setBookMark(true)
             }} />}
           </IconButton>
